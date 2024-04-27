@@ -26,7 +26,7 @@ const addNewTrain = async (req, res) => {
 
     const query =
       "INSERT INTO trains (name, source, destination, total_seats) VALUES (?, ?, ?, ?)";
-    const [result] = await pool.query(query, [
+    await pool.query(query, [
       name,
       source,
       destination,
@@ -45,7 +45,7 @@ const addNewTrain = async (req, res) => {
 };
 
 const getSeatAvailability = async (req, res) => {
-  const { source, destination } = req.body;
+  const { source, destination } = req.query;
 
   try {
     if (!source || !destination) {
