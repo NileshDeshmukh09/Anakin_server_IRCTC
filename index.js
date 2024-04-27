@@ -1,7 +1,7 @@
 // src/app.js
 const express = require('express');
 const app = express();
-const apiRoutes = require('./src/routes/user')
+const apiRoutes = require('./src/routes')
 
 // const apiRoutes = require('./routes/api');
 
