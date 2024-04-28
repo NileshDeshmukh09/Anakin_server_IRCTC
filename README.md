@@ -16,6 +16,12 @@ Live Website : `https://anakin-server-irctc.vercel.app/`
 
 ### FLow Chart - IRCTC server
 -![FlowChart](https://github.com/NileshDeshmukh09/Anakin_server_IRCTC/blob/master/src/Images/flow-chart-IRCTC.png?raw=true)
+
+
+### ER Diagram 
+-![ERDiagram](https://github.com/NileshDeshmukh09/Anakin_server_IRCTC/blob/master/src/Images/ER-Diagram-IRCTC.png?raw=true)
+
+
 ### Swagger Docs Images - Anakin_IRCTC_server
 
 - ![SwaggerAPI](https://github.com/NileshDeshmukh09/Anakin_server_IRCTC/blob/master/src/Images/swagger-Docs.png?raw=true)
