@@ -3,13 +3,13 @@ const { validateRequiredFields } = require("../utils/validations");
 
 const pool = db.promise();
 
-// Controller function to book seats on a train
+
 const bookSeat = async (req, res) => {
   const { trainId, seats } = req.body;
   const userId = req.id;
 
   try {
-    // Validate input data
+
     const requiredFieldsValidation = validateRequiredFields([
       { name: "trainId", value: trainId },
       { name: "seats", value: seats },

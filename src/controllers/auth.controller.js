@@ -29,7 +29,7 @@ const registerUser = async (req, res) => {
     const query =
       "INSERT INTO users (username, email, password, role) VALUES (?, ?, ?, ?)";
 
-    const [result] = await pool.query(query, [
+  await pool.query(query, [
       username,
       email,
       hashedPassword,
@@ -78,7 +78,6 @@ const loginUser = async (req, res) => {
         });
     }
 
-    // Compare the provided password with the hashed password stored in the database
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (!passwordMatch) {
@@ -89,14 +88,14 @@ const loginUser = async (req, res) => {
 
     // Generate a JWT token
     const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
-      expiresIn: "24h", // Token expiration time (e.g., 24 hour)
+      expiresIn: "24h", 
     });
 
     res
       .status(200)
       .json({ success: true, message: "User Logged In successful!", token });
   } catch (error) {
-    // Handle unexpected errors
+ 
     res.status(500).json({ success: false, message: error.message });
   }
 };
