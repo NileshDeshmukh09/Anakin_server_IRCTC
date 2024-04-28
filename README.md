@@ -57,5 +57,7 @@ To run this project, you will need to add the following environment variables to
 - If the requested train is not found or doesn't have enough seats, the transaction is rolled back to undo any changes and keep data consistent.
 - After successfully updating seat availability and recording the booking, the transaction commits changes, ensuring data integrity and preventing issues from concurrent bookings on the same train.
 
+### SQL Queries are mentioned in database.sql Files 
+
 
 # Thankyou for Checking Project
