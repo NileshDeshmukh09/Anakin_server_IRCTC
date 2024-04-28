@@ -34,7 +34,6 @@ const authenticateAdminApiKey = async (req, res, next) => {
   }
   next();
 };
-module.exports = authenticateAdminApiKey;
 
 const authJWT = {
   verifyToken,

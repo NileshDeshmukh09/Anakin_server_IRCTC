@@ -7,17 +7,26 @@ const trainController = require("../../controllers/train.controller");
 const bookingController = require("../../controllers/booking.controller");
 const { JWTAuth } = require("../../middlewares");
 
-
-
+/** Register a new user  */
 router.post("/auth/register", authController.registerUser);
+
+/** Authenticate user and generate access token */
 router.post("/auth/login", authController.loginUser);
+
+/** Add a new train (admin only) */
 router.post(
     "/trains",
     [JWTAuth.verifyToken, JWTAuth.authenticateAdminApiKey],
     trainController.addNewTrain
   );
+
+  /** Get seat availability between source and destination */
 router.get("/seatAvailability", trainController.getSeatAvailability);
+
+/** Book seats on a train */
 router.post("/book-seats", [JWTAuth.verifyToken], bookingController.bookSeat);
+
+/** Retrieve details of a specific booking identified by its ID. */
 router.get(
   "/book-seats/:bookingId",
   [JWTAuth.verifyToken],
