@@ -15,6 +15,8 @@ Live Website : `https://anakin-server-irctc.vercel.app/`
 - Go to Project Directory &  Run ` npm start ` to run the app on http://localhost:8000
 
 ### FLow Chart - IRCTC server
+
+- Added **Authorization Token** in bookASeat and GetBookingDetails Endpoints 
 -![FlowChart](https://github.com/NileshDeshmukh09/Anakin_server_IRCTC/blob/master/src/Images/flow-chart-IRCTC.png?raw=true)
 
 
