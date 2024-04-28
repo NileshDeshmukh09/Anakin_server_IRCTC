@@ -15,7 +15,7 @@ const options = {
     },
     servers:[
         {
-            url:'http://localhost:8000/api/v1'
+            url:'https://anakin-server-irctc.vercel.app/api/v1'
         }
     ]
   },
